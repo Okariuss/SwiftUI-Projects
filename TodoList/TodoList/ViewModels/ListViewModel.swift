@@ -14,15 +14,17 @@ class ListViewModel: ObservableObject {
         }
     }
     
+    private let userDefaults: UserDefaults
     let itemsKey: String = "items_list"
     
-    init() {
+    init(userDefaults: UserDefaults = .standard) {
+        self.userDefaults = userDefaults
         getItems()
     }
     
     func getItems() {
         guard
-            let data = UserDefaults.standard.data(forKey: itemsKey),
+            let data = userDefaults.data(forKey: itemsKey),
             let savedItems = try? JSONDecoder().decode([ItemModel].self, from: data)
         else { return }
         
@@ -50,7 +52,7 @@ class ListViewModel: ObservableObject {
     
     func saveItems() {
         if let encodedData = try? JSONEncoder().encode(items) {
-            UserDefaults.standard.set(encodedData, forKey: itemsKey)
+            userDefaults.set(encodedData, forKey: itemsKey)
         }
     }
 }
