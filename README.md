@@ -14,6 +14,7 @@ Each project demonstrates clean architecture (MVVM, Feature-based), best practic
 
 | # | Project Name | Description | Tags |
 |---|--------------|-------------|------|
+| 1 | [Todo List](./TodoList) | A simple yet powerful SwiftUI-based to-do list app with MVVM, UserDefaults persistence, and unit tests using the new Swift Testing framework. | SwiftUI, MVVM, UserDefaults, Testing |
 
 ---
 
