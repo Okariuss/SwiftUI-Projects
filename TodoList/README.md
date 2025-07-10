@@ -10,7 +10,7 @@ A lightweight yet powerful **To-Do List** app built using SwiftUI and MVVM archi
 - Animated "no items" view with call to action
 - Persistent storage using `UserDefaults`
 - Clean architecture with `@State` and `@EnvironmentObject`
-- Unit tests powered by the new **Swift Testing** framework (introduced in Swift 5.10)
+- Unit tests powered by the new **Swift Testing** framework (introduced in Swift 6.1.2)
 
 ---
 
@@ -30,7 +30,7 @@ The project uses the new `Testing` framework introduced at **WWDC24**:
 
 | Technology       | Description                         |
 |------------------|-------------------------------------|
-| Swift 5.10        | Language version                    |
+| Swift 6.1.2       | Language version                    |
 | SwiftUI           | UI framework                        |
 | MVVM              | Architecture pattern                |
 | Swift Testing     | New native testing framework        |
@@ -42,7 +42,7 @@ The project uses the new `Testing` framework introduced at **WWDC24**:
 
 | Main View | Empty State | Add Item |
 |-----------|-------------|----------|
-|  |  |  |
+| ![Main View](https://github.com/user-attachments/assets/c3dc5369-f8c4-4289-98ee-4fdd485874a5) | ![Empty State](https://github.com/user-attachments/assets/779841e0-e2eb-4491-9050-b9881246fa2f) | ![Add Item](https://github.com/user-attachments/assets/9029d49f-f2c2-4330-b9c6-2051646143b7) |
 
 ---
 
