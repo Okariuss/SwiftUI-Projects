@@ -42,7 +42,7 @@ The project uses the new `Testing` framework introduced at **WWDC24**:
 
 | Main View | Empty State | Add Item |
 |-----------|-------------|----------|
-| ![Main View](./Records/MainView.gif) | ![Empty State](./Records/EmptyState.gif) | ![Add Item](./Records/AddItem.gif) |
+| ![Main View](https://i.imgur.com/TfA3VZp.gif) | ![Empty State](https://i.imgur.com/zIzra7T.gif) | ![Add Item](https://i.imgur.com/4J9sbPb.gif) |
 
 ---
 
