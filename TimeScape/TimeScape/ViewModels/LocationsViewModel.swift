@@ -21,8 +21,12 @@ final class LocationsViewModel: ObservableObject {
         }
     }
     
+    // Current region on map
     @Published var mapCameraPosition: MapCameraPosition = .automatic
     private let mapSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    
+    // Show list of locations
+    @Published var showLocationsList: Bool = false
     
     init() {
         let locations = LocationsDataService.locations
@@ -39,6 +43,18 @@ final class LocationsViewModel: ObservableObject {
                 span: mapSpan
             ))
         }
-        
+    }
+    
+    func toggleLocationsList() {
+        withAnimation(.easeInOut) {
+            self.showLocationsList.toggle()
+        }
+    }
+    
+    func showNextLocation(location: Location) {
+        withAnimation(.easeInOut) {
+            mapLocation = location
+            showLocationsList = false
+        }
     }
 }
