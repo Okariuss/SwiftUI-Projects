@@ -53,11 +53,6 @@
 			path = TimeScapeTests;
 			sourceTree = "<group>";
 		};
-		24928C2C2E204C2A00CCF17D /* TimeScapeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TimeScapeUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +85,6 @@
 			children = (
 				24928C142E204C2800CCF17D /* TimeScape */,
 				24928C222E204C2A00CCF17D /* TimeScapeTests */,
-				24928C2C2E204C2A00CCF17D /* TimeScapeUITests */,
 				24928C132E204C2800CCF17D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,9 +159,6 @@
 			);
 			dependencies = (
 				24928C2B2E204C2A00CCF17D /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				24928C2C2E204C2A00CCF17D /* TimeScapeUITests */,
 			);
 			name = TimeScapeUITests;
 			packageProductDependencies = (
