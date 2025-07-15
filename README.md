@@ -15,6 +15,7 @@ Each project demonstrates clean architecture (MVVM, Feature-based), best practic
 | # | Project Name | Description | Tags |
 |---|--------------|-------------|------|
 | 1 | [Todo List](./TodoList) | A simple yet powerful SwiftUI-based to-do list app with MVVM, UserDefaults persistence, and unit tests using the new Swift Testing framework. | SwiftUI, MVVM, UserDefaults, Testing |
+| 2 | [TimeScape](./TimeScape) | A SwiftUI travel exploration app with animated map annotations, location previews, detail modals, and modern MapKit features (iOS 17+). MVVM architecture applied with clean data models and view composition. | SwiftUI, MVVM, MapKit, Animation |
 
 ---
 
