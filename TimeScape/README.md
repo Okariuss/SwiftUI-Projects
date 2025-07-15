@@ -47,9 +47,9 @@ The project is covered with unit tests using the new `Testing` framework:
 
 ## 📱 Screenshots
 
-| Map View | Location Preview | Location Detail |
-|----------|------------------|-----------------|
-|  |  |  |
+| Map View | Location Detail |
+|----------|------------------|
+| ![Map View](https://i.imgur.com/yU1qlJz.gif) | ![Location Detail](https://i.imgur.com/Fgs2UlP.gif) |
 
 ---
 
