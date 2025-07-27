@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct CryptoroidApp: App {
+    
+    @StateObject private var vm = HomeViewModel()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 HomeView()
                     .toolbarVisibility(.hidden, for: .navigationBar)
             }
+            .environmentObject(vm)
         }
     }
 }
