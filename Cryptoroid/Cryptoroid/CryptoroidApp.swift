@@ -11,7 +11,10 @@ import SwiftUI
 struct CryptoroidApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HomeView()
+                    .toolbarVisibility(.hidden, for: .navigationBar)
+            }
         }
     }
 }
