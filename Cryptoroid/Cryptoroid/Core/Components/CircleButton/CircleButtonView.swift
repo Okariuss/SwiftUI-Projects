@@ -33,8 +33,5 @@ struct CircleButtonView: View {
 #Preview(traits: .sizeThatFitsLayout) {
     Group {
         CircleButtonView(iconName: "plus")
-        
-        CircleButtonView(iconName: "info")
-            .colorScheme(.dark)
     }
 }
