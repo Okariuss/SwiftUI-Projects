@@ -12,6 +12,11 @@ struct CryptoroidApp: App {
     
     @StateObject private var vm = HomeViewModel()
     
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(.accent)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(.accent)]
+    }
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
