@@ -19,7 +19,7 @@ struct CryptoroidApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+            NavigationStack {
                 HomeView()
                     .toolbarVisibility(.hidden, for: .navigationBar)
             }

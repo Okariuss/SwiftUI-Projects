@@ -21,6 +21,7 @@ struct CoinRowView: View {
             }
             rightColumn
         }
+        .contentShape(.rect)
         .font(.subheadline)
     }
 }
