@@ -22,6 +22,7 @@ final class MarketDataService {
         
         marketDataSubscription = NetworkingManager.dowmload(url: url)
             .decode(type: GlobalDataModel.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: NetworkingManager.handleCompletion,
                   receiveValue: { [weak self] returnedGlobalData in
                     guard let self else { return }

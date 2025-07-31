@@ -22,6 +22,7 @@ final class CoinDataService {
         
         coinSubscription = NetworkingManager.dowmload(url: url)
             .decode(type: [CoinModel].self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: NetworkingManager.handleCompletion,
                   receiveValue: { [weak self] returnedCoins in
                     guard let self else { return }
