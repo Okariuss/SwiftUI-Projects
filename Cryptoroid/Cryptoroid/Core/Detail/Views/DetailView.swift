@@ -34,28 +34,42 @@ struct DetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
-                Text("")
-                    .frame(height: 150)
+            VStack {
+                ChartView(coin: vm.coin)
+                    .padding(.vertical)
                 
-                setTitle(title: "Overview")
-                Divider()
-                
-                setStatsGrid(stats: vm.additionalStatistics)
-                
-                setTitle(title: "Additional Details")
-                Divider()
-                
-                setStatsGrid(stats: vm.additionalStatistics)
+                VStack(spacing: 20) {
+                    setTitle(title: "Overview")
+                    Divider()
+                    setStatsGrid(stats: vm.additionalStatistics)
+                    setTitle(title: "Additional Details")
+                    Divider()
+                    setStatsGrid(stats: vm.additionalStatistics)
+                }
+                .padding()
             }
-            .padding()
         }
         .navigationTitle(vm.coin.name)
         .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                navigationBarTrailingItems
+            }
+        }
     }
 }
 
 extension DetailView {
+    
+    private var navigationBarTrailingItems: some View {
+        HStack {
+            Text(vm.coin.symbol.uppercased())
+                .foregroundStyle(.secondaryText)
+            
+            CoinImageView(coin: vm.coin)
+                .frame(width: 25, height: 25)
+        }
+    }
     
     private func setTitle(title: String) -> some View {
         Text(title)
