@@ -19,20 +19,17 @@ final class CoinImageViewModel: ObservableObject {
     init(coin: CoinModel) {
         self.coin = coin
         self.dataService = CoinImageService(coin: coin)
-        addSubscribers()
         self.isLoading = true
+        addSubscribers()
     }
     
     private func addSubscribers() {
         dataService.$image
-            .sink { [weak self] _ in
-                guard let self else { return }
-                self.isLoading = false
-            } receiveValue: { [weak self] returnedImage in
+            .sink(receiveValue: { [weak self] returnedImage in
                 guard let self else { return }
                 self.image = returnedImage
-            }
+                self.isLoading = false
+            })
             .store(in: &cancellables)
-
     }
 }
